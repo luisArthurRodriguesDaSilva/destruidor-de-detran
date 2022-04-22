@@ -118,7 +118,6 @@ def rodar(a):
         elif z == 3:
             itpve(a)
         elif z == 4:
-            print("passei aki")
             tpm(a)
         elif z == 5:
             tj(a)
