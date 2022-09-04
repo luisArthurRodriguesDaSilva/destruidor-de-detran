@@ -1,5 +1,5 @@
 <h1>destruidor de detran</h1>
- O <strong>destruidor de detran</strong> é uma automação feita por mim com o intuito de facilitar o agendamento de diversos tipos de documentos pois o site do detran contem uma quantidade um tanto excessiva de partes repetitivas que "devem" ser preenchidas manualmente
+ O <strong>destruidor de detran</strong> é uma aplicação feita com o intuito de facilitar o agendamento de diversos tipos de documentos no site do detran pois ele contem um excesso de partes exautivamente repetitivas, o que permite uma automatização baseada em uma base de dados e um bot colocando-os no seu devido lugar, exigindo a participação humana apenas no final para o preenchimento do captcha e confirmação
 <br></br>
 
 <h2>serviços disponiveis</h2>
