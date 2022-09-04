@@ -102,7 +102,7 @@ def rodar(a):
     abrir(a)
     alarme1=True
     try:
-        z=x[primeira_palavra(botoes.arq.SERVIÇO[a])]
+        z=x[primeira_palavra(botoes.arq.SERVICO[a])]
         print(f"{z}z")
         time.sleep(1)
         comeca_contagem()

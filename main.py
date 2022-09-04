@@ -18,7 +18,7 @@ def contar():
         if alarme :
             print("alarmou")
             break
-        elif final-inicial>3:
+        elif final-inicial>3:           
             escar()
             break
 def comeca_contagem():
@@ -34,7 +34,7 @@ botoes.entrar()
 alarme=True
 
 print('depois')
-for i in range((len(botoes.arq.SERVIÇO))):
+for i in range((len(botoes.arq.SERVICO))):
     try:
         fs.rodar(i)
     except:

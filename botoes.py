@@ -37,10 +37,11 @@ while True:
 
 window.close()
 
-print("endereço:")
 
 nav = webdriver.Chrome(ChromeDriverManager().install())
 action=webdriver.ActionChains(nav)
+nav.maximize_window()
+
 
 #arq = pd.read_json(r"C:\Users\luarp\PycharmProjects\destruidor de detran\venv\dados do detran.json")
 arq = pd.read_excel(f"{endereco}")
@@ -108,7 +109,7 @@ def escolher_botao_cpfcnpj_t_plac(a) :
 def matricular():
     nav.find_element(By.ID, 'matriculaDespachante').send_keys(str(matricula))
 def selecionar_serv_extra_tpm(a):
-    palavras=separar_palavras(arq.SERVIÇO[a])
+    palavras=separar_palavras(arq.SERVICO[a])
     for palavra in palavras:
         try:
             print(palavra)
@@ -170,7 +171,7 @@ def procedimento_padrao(a):
         print(e)
         print("falhou em CEP")
         print("falhou em CEP")
-    if primeira_palavra(arq.SERVIÇO[a])== 'TP':
+    if primeira_palavra(arq.SERVICO[a])== 'TP':
         try:
             print("AGORA")
             time.sleep(1)
@@ -194,7 +195,7 @@ def procedimento_padrao(a):
             print (f"a data é{datas}")
             print(f"{remover_traços(datas[2])}/{remover_traços(datas[1])}/{remover_traços(datas[0])}")
             digitar(f"{remover_traços(datas[2][0:2])}/{remover_traços(datas[1])}/{remover_traços(datas[0])}")
-            print(f"cheguei em else indevido)")#{arq.SERVIÇO[a]}")
+            print(f"cheguei em else indevido)")#{arq.SERVICO[a]}")
         except Exception as e:
             print(e)
             print("falhou em data venda")
@@ -318,7 +319,7 @@ def bot_transferencia_de_juris(a):
     global alarme2
     alarme2=False
     comeca_contagem()
-    nav.find_element(By.XPATH,f"/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/table[1]/tbody/tr/td/input[{str(possibilidades.servico_tj[arq.SERVIÇO[a]])}]").click()
+    nav.find_element(By.XPATH,f"/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/table[1]/tbody/tr/td/input[{str(possibilidades.servico_tj[arq.SERVICO[a]])}]").click()
     nav.find_element(By.XPATH,'/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/table[2]/tbody/tr/td[2]/div/img').click()
     alarme2 = True
 def bot_tpm(a):
@@ -326,7 +327,7 @@ def bot_tpm(a):
     alarme2=False
     comeca_contagem()
     try:
-        tipo=possibilidades.servico_tpm[arq.SERVIÇO[a]]
+        tipo=possibilidades.servico_tpm[arq.SERVICO[a]]
         nav.find_element(By.XPATH,f"/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/ul/li[{str(tipo)}]/input").click()
         nav.find_element(By.XPATH, '/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/div[1]/input[2]').click()
     except:
@@ -340,7 +341,7 @@ def bot_tp(a):
     global alarme2
     alarme2=False
     comeca_contagem()
-    tipo = possibilidades.servico_tp[arq.SERVIÇO[a]]
+    tipo = possibilidades.servico_tp[arq.SERVICO[a]]
     nav.find_element(By.XPATH, f"/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/ul/li[{str(tipo)}]/input").click()
     nav.find_element(By.XPATH, '/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/div[1]/input[2]').click()
     alarme2=True
@@ -350,7 +351,7 @@ def bot_t_plac(a):
     global alarme2
     alarme2 = False
     comeca_contagem()
-    palavras=separar_palavras(arq.SERVIÇO[a])
+    palavras=separar_palavras(arq.SERVICO[a])
     for i in range(len(palavras)):
         try:
             #nav.find_element(By.XPATH,f'/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/fieldset[2]/span[{possibilidades_PL_MERCOSUL[palavras[i]]}]/input').click
@@ -363,7 +364,7 @@ def bot_BX_GR(a):
     global alarme2
     alarme2 = False
     comeca_contagem()
-    palavras = separar_palavras(arq.SERVIÇO[a])  # (arq.SERVIÇO[a])
+    palavras = separar_palavras(arq.SERVICO[a])  # (arq.SERVICO[a])
     if 'CETIDAO' in palavras:
         nav.find_element(By.XPATH,'/html/body/div[5]/div[4]/div/table/tbody/tr/td/form/fieldset[1]/span[2]/input').click()
     if 'BV' in palavras:
