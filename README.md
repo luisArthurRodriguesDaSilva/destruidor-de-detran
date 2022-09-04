@@ -31,14 +31,22 @@ except Exception as e:
     print (e)
         
 ```
-<h3>essas são as opções relativas a pagina de <a href="https://www.detran.rj.gov.br/_documento.asp?cod=7620">agendamentos de veiculos </a> do detran</h3>
-<img src="Captura de tela de 2022-04-21 22-42-38.png">
+
+Todos os dados e informações devem estar em uma planilha seguindo esse modelo
+<img src="imgs/WhatsApp Image 2022-09-04 at 19.18.41.jpeg">
+
+as opções de serviço possiveis são relativas às presentes em <a href="https://www.detran.rj.gov.br/_documento.asp?cod=7620">agendamentos de veiculos </a> do site do detran
+<img src="imgs/Captura de tela de 2022-04-21 22-42-38.png">
+
+após o devido preenchimento da planilha assim com a instalação dos recursos nescessários o <strong>Destruidor de Detran</strong> deve se comportar dessa maneira
+
+<img src="imgs/ezgif.com-gif-maker (2).gif">
 
 <br></br>
-# tecnologias usadas
+# tecnologias e bibliotecas usadas
 <ul>
-<li><h2>Selenium</h2></li>
-<li><h2>Chromedriver</h2></li>
-<li><h2>Pyautogui</h2></li>
-<li><h2>Treads</h2></li>
+<li><h2><a href="https://selenium-python.readthedocs.io/">Selenium</a></h2></li>
+<li><a href="https://chromedriver.chromium.org/downloads" ><h2>Chromedriver</h2></a></li>
+<li><a href="https://pyautogui.readthedocs.io/en/latest/" ><h2>Pyautogui</h2></a></li>
+<li><a href="https://docs.python.org/3/library/threading.html" ><h2>Treads (para melhoria do desempenho)</h2></a></li>
 </ul>
