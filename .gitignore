@@ -1,3 +1,7 @@
 /cençored.py
 /img
 /__pycache__
+build
+dist
+main.spec
+python3.spec

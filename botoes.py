@@ -16,10 +16,20 @@ import sys
 global nav
 global arq
 global endereco
+
+
+working_directory = os.getcwd()
 sg.theme('LightBlue3')
 layout = [
-            [sg.Text('insira o endereço do arquivo'), sg.InputText(background_color='#ffffff'),
-            sg.Text('matricula'), sg.InputText(background_color='#ffffff')],
+            [
+                sg.Text('insira o endereço do arquivo'),
+                sg.InputText(background_color='#ffffff'),
+                sg.FileBrowse(
+                    initial_folder=working_directory,
+                    file_types=[("xmls Files", "*.xlsx")]
+                    )
+            ],
+            [sg.Text('matricula'), sg.InputText(background_color='#ffffff')],
             [sg.Button('começar'), sg.Button('Cancelar')] ]
 
 # Create the Window
